@@ -1,0 +1,10 @@
+{
+    "name": "@honey-heist/backend",
+    "version": "1.0.0",
+    "private": true,
+    "scripts": {
+      "build": "tsc --build",
+      "start": "yarn build && node dist/index.js"
+    }
+  }
+  

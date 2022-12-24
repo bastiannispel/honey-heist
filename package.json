@@ -1,0 +1,19 @@
+{
+  "name": "honey-heist",
+  "version": "1.0.0",
+  "author": "Bastian Nispel",
+  "private": true,
+  "scripts": {
+    "backend": "yarn workspace @honey-heist/backend run",
+    "model": "yarn workspace @honey-heist/model run"
+  },
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ],
+    "nohoist": []
+  },
+  "devDependencies": {
+    "typescript": "^4.9.4"
+  }
+}
