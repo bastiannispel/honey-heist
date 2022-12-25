@@ -1,9 +1,28 @@
-export default interface Stats {
-    bear: 3,
-    criminal: 3
+import IStats, { BearSkill, CriminalSkill, StatsData } from "./types/stats";
 
-    addBearish(): void
-    removeBearish(): void
-    addCriminalish(): void
-    removeCriminalish(): void
-} 
+
+export default class Stats implements IStats{
+    private _bear: BearSkill;
+    private _criminal: CriminalSkill;
+
+    constructor(statsData?: StatsData) {
+        this._bear = statsData.bear ?? 3
+        this._criminal = statsData.criminal ?? 3
+    }
+
+    get bear(): BearSkill {
+        return this._bear
+    }
+    get criminal(): CriminalSkill {
+        return this._criminal
+    }
+
+    addBearSkill(): void {
+        this._bear += 1
+        this._criminal -= 1
+    }
+    addCriminalSkill(): void {
+        this._criminal += 1
+        this._bear -= 1
+    }
+}
