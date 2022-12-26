@@ -1,0 +1,7 @@
+**/fixtures/**/*
+**/dist
+**/.yarn
+**/coverage
+**/shared-fixtures
+**/.vscode
+**/.vs
