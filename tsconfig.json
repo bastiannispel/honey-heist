@@ -3,12 +3,11 @@
       "jsx": "react",
       "baseUrl": "./packages",
       "paths": {
-        "@honey-heist/model/*": ["model/src/*"],
-        "@honey-heist/backend/*": ["backend/src/*"],
-        "@honey-heist/frontend/*": ["frontend/src/*"],
+          "@honey-heist/model/*": ["model/src/*"],
+          "@honey-heist/backend/*": ["backend/src/*"],
+          "@honey-heist/frontend/*": ["frontend/src/*"],
       }
   },
-  "files": [],
   "references": [
       {"path": "packages/model"},
       {"path": "packages/backend"},
