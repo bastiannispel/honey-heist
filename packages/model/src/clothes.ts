@@ -1,6 +1,5 @@
-import IClothes, { ClothesData } from "./types/clothes";
-
-import { rollDice6 } from "./utility/random";
+import { rollDice6 } from "../utility/random";
+import IClothes, { Accessoire, ClothesData } from "../types/clothes";
 
 
 export default class Clothes implements IClothes{
@@ -8,14 +7,14 @@ export default class Clothes implements IClothes{
     private _top: number;
     private _pantsColor: number;
     private _pants: number;
-    private _accessoire?: number;
+    private _accessoire: Accessoire;
 
     constructor(clothesData?: ClothesData) {
-       this._topColor = clothesData.topColor ?? rollDice6()
-       this._top = clothesData.top ?? rollDice6()
-       this._pantsColor = clothesData.pantsColor ?? rollDice6()
-       this._pants = clothesData.pants ?? rollDice6()
-       this._accessoire = clothesData.accessoire ?? NaN
+       this._topColor = clothesData?.topColor ?? rollDice6()
+       this._top = clothesData?.top ?? rollDice6()
+       this._pantsColor = clothesData?.pantsColor ?? rollDice6()
+       this._pants = clothesData?.pants ?? rollDice6()
+       this._accessoire = clothesData?.accessoire ?? NaN
     }
 
     get topColor(): number {
@@ -30,7 +29,7 @@ export default class Clothes implements IClothes{
     get pants(): number {
         return this._pants
     }
-    get accessoire(): number {
+    get accessoire(): Accessoire {
         return this._accessoire
     }
 
