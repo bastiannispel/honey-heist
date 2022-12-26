@@ -1,11 +1,15 @@
 {
+    "extends": "../../tsconfig.build.json",
     "compilerOptions": {
         "composite": true,
-        "declaration": true,
-        "declarationMap": true,
-        "sourceMap": true,
         "outDir": "dist",
-        "rootDir": "src"
+        "rootDir": ".",
+        "baseUrl": ".",
+        "module": "CommonJS",
+        "paths": {
+            "utility/*":["utility/*"]
+        }
     },
-    "include": ["src", "src/types"]
+    "include": ["src", "utility"],
+    
 }

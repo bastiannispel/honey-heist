@@ -1,11 +1,12 @@
-import IBear, { Descriptor, BearType, Role, BearData } from "./types/bear";
-import IClothes from "./types/clothes";
-import IStats from "./types/stats";
+import { rollDice6 } from "utility/random";
+
+import IBear, { Descriptor, BearType, Role, BearData } from "types/bear";
+import IClothes from "types/clothes";
+import IStats from "types/stats";
 
 import Clothes from "./clothes";
 import Stats from "./stats";
 
-import { rollDice6 } from "./utility/random";
 
 
 export default class Bear implements IBear {

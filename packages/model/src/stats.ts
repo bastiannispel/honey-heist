@@ -1,4 +1,4 @@
-import IStats, { BearSkill, CriminalSkill, StatsData } from "./types/stats";
+import IStats, { BearSkill, CriminalSkill, StatsData } from "types/stats";
 
 
 export default class Stats implements IStats{
@@ -6,8 +6,8 @@ export default class Stats implements IStats{
     private _criminal: CriminalSkill;
 
     constructor(statsData?: StatsData) {
-        this._bear = statsData.bear ?? 3
-        this._criminal = statsData.criminal ?? 3
+        this._bear = statsData?.bear ?? 3
+        this._criminal = statsData?.criminal ?? 3
     }
 
     get bear(): BearSkill {
