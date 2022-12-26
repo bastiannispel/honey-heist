@@ -3,17 +3,17 @@
   "version": "1.0.0",
   "author": "Bastian Nispel",
   "private": true,
-  "scripts": {
-    "backend": "yarn workspace @honey-heist/backend run",
-    "model": "yarn workspace @honey-heist/model run"
-  },
   "workspaces": {
     "packages": [
       "packages/*"
-    ],
-    "nohoist": []
+    ]
+  },
+  "scripts": {
+    "clean": "lerna run clean",
+    "bootstrap": "lerna clean && lerna bootstrap"
   },
   "devDependencies": {
-    "typescript": "^4.9.4"
+    "lerna": "6.1.0",
+    "typescript": "4.9.4"
   }
 }
