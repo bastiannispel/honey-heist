@@ -5,7 +5,6 @@
         "outDir": "dist",
         "rootDir": ".",
         "baseUrl": ".",
-        "module": "CommonJS",
         "paths": {
             "utility/*":["utility/*"]
         }

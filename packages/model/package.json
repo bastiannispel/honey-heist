@@ -3,9 +3,5 @@
   "version": "1.0.0",
   "private": true,
   "main": "dist/index.js",
-  "types": "src/types/index.d.ts",
-  "scripts": {
-    "test": "yarn jest",
-    "coverage": "yarn jest --coverage"
-  }
+  "types": "src/types/index.d.ts"
 }
