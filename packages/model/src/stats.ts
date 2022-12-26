@@ -1,4 +1,4 @@
-import IStats, { BearSkill, CriminalSkill, StatsData } from "types/stats";
+import IStats, { BearSkill, CriminalSkill, StatsData } from "../types/stats";
 
 
 export default class Stats implements IStats{

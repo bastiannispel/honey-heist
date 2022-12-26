@@ -1,5 +1,5 @@
-import { rollDice6 } from "utility/random";
-import IClothes, { Accessoire, ClothesData } from "types/clothes";
+import { rollDice6 } from "../utility/random";
+import IClothes, { Accessoire, ClothesData } from "../types/clothes";
 
 
 export default class Clothes implements IClothes{

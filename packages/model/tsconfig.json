@@ -1,13 +1,8 @@
 {
-    "extends": "../../tsconfig.build.json",
+    "extends": "../../tsconfig.json",
     "compilerOptions": {
         "composite": true,
         "outDir": "dist",
-        "rootDir": ".",
-        "baseUrl": ".",
-        "paths": {
-            "utility/*":["utility/*"]
-        }
     },
     "include": ["src", "utility"],
     

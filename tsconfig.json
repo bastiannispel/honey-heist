@@ -1,16 +1,9 @@
 {
-  "compilerOptions": {
-      "jsx": "react",
-      "baseUrl": "./packages",
-      "paths": {
-          "@honey-heist/model/*": ["model/src/*"],
-          "@honey-heist/backend/*": ["backend/src/*"],
-          "@honey-heist/frontend/*": ["frontend/src/*"],
+    "extends": "./tsconfig.build.json",
+    "compilerOptions": {
+        "baseUrl": "./packages",
+        "paths": {
+          "@honey-heist/*": ["*/src"]
+        }
       }
-  },
-  "references": [
-      {"path": "packages/model"},
-      {"path": "packages/backend"},
-      {"path": "packages/frontend"},
-  ]
 }
