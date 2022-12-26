@@ -1,8 +1,9 @@
 import Bear from "../bear"
 
-describe('Bear Class', () => { 
-    test('Bear Init', () => { 
+describe('bearClass', () => { 
+    it('init', () => {
+        expect.hasAssertions(); 
         const bear = new Bear()
-        expect(bear).not.toBe(undefined)
+        expect(bear).toBeDefined()
      })
  })

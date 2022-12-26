@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "private": true,
   "main": "dist/index.js",
-  "types": "src/types/index.d.ts",
+  "types": "types/index.d.ts",
   "scripts": {
-    "coverage": "jest --coverage"
+    "test": "jest --coverage",
+    "eslint": "eslint . --ext .ts,.tsx"
   }
 }
