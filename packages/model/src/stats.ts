@@ -8,6 +8,12 @@ export default class Stats implements IStats {
     this._bear = statsData?.bear ?? 3;
     this._criminal = statsData?.criminal ?? 3;
   }
+  serialize(): StatsData {
+    return {
+      bear: this._bear,
+      criminal: this._criminal,
+    };
+  }
 
   get bear(): BearSkill {
     return this._bear;

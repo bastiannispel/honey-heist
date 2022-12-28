@@ -1,7 +1,8 @@
 import IClothes, { ClothesData } from './clothes';
+import ISerializable from './serializable';
 import IStats, { StatsData } from './stats';
 
-export default interface IBear {
+export default interface IBear extends ISerializable<BearData> {
   get descriptor(): Descriptor;
   get bearType(): BearType;
   get role(): Role;

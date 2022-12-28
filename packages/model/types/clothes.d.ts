@@ -1,4 +1,6 @@
-export default interface IClothes {
+import ISerializable from './serializable';
+
+export default interface IClothes extends ISerializable<ClothesData> {
   get topColor(): TopColor;
   get top(): Top;
   get pantsColor(): PantsColor;
@@ -11,7 +13,7 @@ export type ClothesData = {
   top: Top;
   pantsColor: PantsColor;
   pants: Pants;
-  accessoire?: Accessoire;
+  accessoire: Accessoire;
 };
 
 type TopColor = number;

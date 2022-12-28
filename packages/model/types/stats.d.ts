@@ -1,4 +1,6 @@
-export default interface IStats {
+import ISerializable from './serializable';
+
+export default interface IStats extends ISerializable<StatsData> {
   get bear(): BearSkill;
   get criminal(): CriminalSkill;
 
