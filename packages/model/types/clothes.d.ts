@@ -16,8 +16,8 @@ export type ClothesData = {
   accessoire: Accessoire;
 };
 
-type TopColor = number;
-type Top = number;
-type PantsColor = number;
-type Pants = number;
-type Accessoire = number;
+export type TopColor = number;
+export type Top = number;
+export type PantsColor = number;
+export type Pants = number;
+export type Accessoire = number;

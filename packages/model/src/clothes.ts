@@ -15,13 +15,14 @@ export default class Clothes implements IClothes {
     this._pants = clothesData?.pants ?? rollDice6();
     this._accessoire = clothesData?.accessoire ?? NaN;
   }
+
   serialize(): ClothesData {
     return {
-      topColor: this._topColor,
-      top: this._top,
-      pantsColor: this._pantsColor,
-      pants: this._pants,
-      accessoire: this._accessoire,
+      topColor: this.topColor,
+      top: this.top,
+      pantsColor: this.pantsColor,
+      pants: this.pants,
+      accessoire: this.accessoire,
     };
   }
 
