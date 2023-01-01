@@ -9,6 +9,8 @@
     ]
   },
   "scripts": {
+    "check-clean-workspace-after-install": "git diff --quiet --exit-code",
+    "check-format": "prettier --list-different .",
     "test": "lerna run test --stream",
     "eslint": "lerna run eslint --stream",
     "prettier:check": "prettier --check '**/*.{js,jsx,ts,tsx}'",
