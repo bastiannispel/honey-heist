@@ -22,6 +22,16 @@ export default class Bear implements IBear {
     this._stats = new Stats(bearData?.stats);
   }
 
+  serialize(): BearData {
+    return {
+      descriptor: this.descriptor,
+      bearType: this.bearType,
+      role: this.role,
+      clothes: this.clothes.serialize(),
+      stats: this.stats.serialize(),
+    };
+  }
+
   get descriptor(): Descriptor {
     return this._descriptor;
   }
