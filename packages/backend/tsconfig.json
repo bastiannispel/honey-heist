@@ -3,7 +3,7 @@
   "compilerOptions": {
     "composite": true,
     "outDir": "dist",
-    "esModuleInterop": true
+    "rootDir": "src"
   },
   "include": ["src", "utility"]
 }
