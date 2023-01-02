@@ -1,8 +1,9 @@
 {
   "extends": "../../tsconfig.json",
   "compilerOptions": {
-      "composite": true,
-      "outDir": "dist",
+    "composite": true,
+    "outDir": "dist",
+    "esModuleInterop": true
   },
-  "include": ["src", "utility"], 
+  "include": ["src", "utility"]
 }

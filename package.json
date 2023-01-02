@@ -9,11 +9,13 @@
     ]
   },
   "scripts": {
+    "backend": "yarn workspace @honey-heist/backend",
     "check-clean-workspace-after-install": "git diff --quiet --exit-code",
     "test": "lerna run test --stream",
     "eslint": "lerna run eslint --stream",
     "check-format": "prettier --check '**/*.{js,jsx,ts,tsx}'",
     "write-format": "prettier --write '**/*.{js,jsx,ts,tsx}'",
+    "typecheck": "lerna run typecheck --stream",
     "postinstall": "husky install"
   },
   "devDependencies": {
