@@ -10,13 +10,11 @@
   },
   "scripts": {
     "check-clean-workspace-after-install": "git diff --quiet --exit-code",
-    "check-format": "prettier --list-different .",
     "test": "lerna run test --stream",
     "eslint": "lerna run eslint --stream",
-    "prettier:check": "prettier --check '**/*.{js,jsx,ts,tsx}'",
-    "prettier:write": "prettier --write '**/*.{js,jsx,ts,tsx}'",
-    "postinstall": "husky install",
-    "pre-commit": "yarn lint-staged"
+    "check-format": "prettier --check '**/*.{js,jsx,ts,tsx}'",
+    "write-format": "prettier --write '**/*.{js,jsx,ts,tsx}'",
+    "postinstall": "husky install"
   },
   "devDependencies": {
     "@types/jest": "29.2.5",
