@@ -1,4 +1,4 @@
-import { rollDice6, rollDice8 } from '../random';
+import { rollDice6, rollDice8 } from '../random.js';
 
 describe('rollDice6', () => {
   it('result are between 1-6', () => {
