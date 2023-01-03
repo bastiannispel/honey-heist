@@ -8,5 +8,6 @@
     "test": "jest --coverage",
     "eslint": "eslint . --ext .ts,.tsx",
     "typecheck": "tsc -p tsconfig.json --noEmit"
-  }
+  },
+  "dependencies": {}
 }

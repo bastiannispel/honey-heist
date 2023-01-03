@@ -1,11 +1,12 @@
-import * as express from 'express';
+import express from 'express';
 const router = express.Router();
 
+router.get('/', (req, res, next) => {
+  next(new Error('not implemented'));
+});
+
 router
-  .route('/')
-  .get((req, res, next) => {
-    next(new Error('not implemented'));
-  })
+  .route('/:id')
   .post((req, res, next) => {
     next(new Error('not implemented'));
   })
