@@ -6,6 +6,8 @@
   "types": "types/index.d.ts",
   "scripts": {
     "test": "jest --coverage",
-    "eslint": "eslint . --ext .ts,.tsx"
-  }
+    "eslint": "eslint . --ext .ts,.tsx",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "dependencies": {}
 }
