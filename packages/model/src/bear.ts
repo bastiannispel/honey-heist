@@ -1,5 +1,11 @@
 import mongoose, { Schema } from 'mongoose';
-import { clothesSchema, IClothes, IStats, statsSchema } from '.';
+import {
+  clothesSchema,
+  dice6SchemaOptions,
+  IClothes,
+  IStats,
+  statsSchema,
+} from '.';
 
 export interface IBear {
   descriptor: number;
@@ -10,9 +16,9 @@ export interface IBear {
 }
 
 export const bearSchema = new Schema<IBear>({
-  descriptor: { type: Number, required: true },
-  bearType: { type: Number, required: true },
-  role: { type: Number, required: true },
+  descriptor: dice6SchemaOptions,
+  bearType: dice6SchemaOptions,
+  role: dice6SchemaOptions,
   clothes: clothesSchema,
   stats: statsSchema,
 });
