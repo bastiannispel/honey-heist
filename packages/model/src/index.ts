@@ -1,4 +1,2 @@
-export * from './bear';
-export * from './clothes';
-export * from './stats';
-export * from './constants';
+export * from 'types';
+export * from 'utility';
