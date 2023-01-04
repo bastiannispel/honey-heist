@@ -14,6 +14,6 @@ export const bearSchema = new Schema<IBear>({
   descriptor: { type: Number, required: true, min: 1, max: 6 },
   bearType: { type: Number, required: true, min: 1, max: 6 },
   role: { type: Number, required: true, min: 1, max: 6 },
-  clothes: { ...clothesSchema },
-  stats: { ...statsSchema },
+  clothes: clothesSchema,
+  stats: statsSchema,
 });

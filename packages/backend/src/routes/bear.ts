@@ -1,8 +1,9 @@
 import express from 'express';
+import { createBear } from '../controllers';
 const bearRouter = express.Router();
 
 bearRouter.post('/', (req, res, next) => {
-  next(new Error('not implemented'));
+  void createBear(req, res, next);
 });
 
 bearRouter

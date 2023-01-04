@@ -1,6 +1,7 @@
-// import { BearModel } from '../database/models.js';
+import { IBear } from '@honey-heist/model';
+import { BearModel } from '../database/models.js';
 
-// export async function createBear() {
-//   const model = new BearModel();
-//   console.log(model);
-// }
+export async function addBear(bear: IBear) {
+  const model = new BearModel(bear);
+  await model.save();
+}

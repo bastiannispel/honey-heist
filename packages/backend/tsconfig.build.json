@@ -4,13 +4,6 @@
     "outDir": "./dist",
     "rootDir": "./src",
     "baseUrl": "./src",
-    "paths": {
-      "controllers/*": ["controllers/*"],
-      "database/*": ["database/*"],
-      "middleware/*": ["middleware/*"],
-      "routes/*": ["routes/*"],
-      "services/*": ["services/*"]
-    },
     "resolveJsonModule": true
   },
   "include": ["src"],

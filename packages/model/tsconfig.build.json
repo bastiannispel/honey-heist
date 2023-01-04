@@ -4,11 +4,6 @@
     "composite": true,
     "rootDir": "./src",
     "outDir": "./dist",
-    "baseUrl": "./src",
-    "paths": {
-      "types": ["types/index.js"],
-      "utility": ["utility/index.js"]
-    },
     "resolveJsonModule": true,
     "strict": true
   },
