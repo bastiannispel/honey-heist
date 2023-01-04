@@ -1,8 +1,8 @@
 import * as express from 'express';
 const router = express.Router();
 
-import bear from './bear.js';
+import bearRouter from './bear';
 
-router.use('/bear', bear);
+router.use('/bear', bearRouter);
 
 export default router;

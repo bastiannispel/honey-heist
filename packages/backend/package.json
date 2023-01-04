@@ -2,12 +2,11 @@
   "name": "@honey-heist/backend",
   "version": "1.0.0",
   "private": true,
-  "type": "module",
   "scripts": {
     "build": "tsc --build tsconfig.build.json",
     "clean": "rimraf ./dist",
     "start": "yarn clean && yarn build && node dist/server.js",
-    "test": "jest --coverage",
+    "test": "jest --coverage --passWithNoTests",
     "eslint": "eslint . --ext .ts,.tsx",
     "typecheck": "tsc -p tsconfig.json --noEmit"
   },

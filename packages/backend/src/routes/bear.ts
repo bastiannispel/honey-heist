@@ -1,11 +1,11 @@
 import express from 'express';
-const router = express.Router();
+const bearRouter = express.Router();
 
-router.post('/', (req, res, next) => {
+bearRouter.post('/', (req, res, next) => {
   next(new Error('not implemented'));
 });
 
-router
+bearRouter
   .route('/:id')
   .get((req, res, next) => {
     next(new Error('not implemented'));
@@ -17,4 +17,4 @@ router
     next(new Error('not implemented'));
   });
 
-export default router;
+export default bearRouter;
