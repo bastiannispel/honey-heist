@@ -3,6 +3,7 @@ import mongoose from 'mongoose';
 import * as dotenv from 'dotenv';
 
 import router from './routes';
+import { connectDB } from './database';
 
 dotenv.config();
 
@@ -11,9 +12,7 @@ app.use(express.json());
 app.use('/api', router);
 
 mongoose.set('strictQuery', false);
-mongoose.connect(process.env.MONGODB_URL as string, () => {
-  console.log('Connected to MongoDB');
-});
+void connectDB();
 
 app.listen(3000, () => {
   console.log('Server has started!');
