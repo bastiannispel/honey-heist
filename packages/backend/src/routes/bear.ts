@@ -1,14 +1,13 @@
 import express from 'express';
-const router = express.Router();
+import { createBear, fetchBear } from '../controllers';
+const bearRouter = express.Router();
 
-router.get('/', (req, res, next) => {
-  next(new Error('not implemented'));
-});
+bearRouter.post('/', () => createBear);
 
-router
+bearRouter
   .route('/:id')
-  .post((req, res, next) => {
-    next(new Error('not implemented'));
+  .get((req, res, next) => {
+    void fetchBear(req, res, next);
   })
   .put((req, res, next) => {
     next(new Error('not implemented'));
@@ -17,4 +16,4 @@ router
     next(new Error('not implemented'));
   });
 
-export default router;
+export default bearRouter;

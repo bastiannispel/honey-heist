@@ -7,5 +7,5 @@
     "resolveJsonModule": true,
     "strict": true
   },
-  "include": ["src", "types"]
+  "include": ["src/**/*"]
 }

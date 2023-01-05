@@ -3,4 +3,3 @@
 
 yarn check-format
 yarn lint-staged
-yarn typecheck

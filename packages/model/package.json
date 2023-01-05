@@ -3,11 +3,16 @@
   "version": "1.0.0",
   "private": true,
   "main": "dist/index.js",
-  "types": "types/index.d.ts",
+  "types": "dist/index.d.ts",
   "scripts": {
+    "build": "tsc --build tsconfig.build.json",
+    "clean": "tsc -b tsconfig.build.json --clean",
+    "postclean": "rimraf dist && rimraf coverage",
     "test": "jest --coverage",
     "eslint": "eslint . --ext .ts,.tsx",
     "typecheck": "tsc -p tsconfig.json --noEmit"
   },
-  "dependencies": {}
+  "dependencies": {
+    "mongoose": "6.8.2"
+  }
 }

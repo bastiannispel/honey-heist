@@ -2,8 +2,7 @@
   "extends": "./tsconfig.build.json",
   "compilerOptions": {
     "composite": false,
-    "rootDir": ".",
-    "baseUrl": "."
+    "rootDir": "."
   },
-  "include": ["src", "types", "utility"]
+  "include": ["src"]
 }

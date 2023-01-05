@@ -1,11 +1,9 @@
 {
-  "extends": "../../tsconfig.json",
+  "extends": "./tsconfig.build.json",
   "compilerOptions": {
-    "outDir": "dist",
-    "rootDir": "src",
-    "moduleResolution": "NodeNext",
-    "target": "ESNext",
-    "module": "ESNext"
+    "composite": false,
+    "rootDir": "."
   },
-  "include": ["src"]
+  "include": ["src"],
+  "references": [{ "path": "../model/tsconfig.build.json" }]
 }
