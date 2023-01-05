@@ -7,7 +7,6 @@ export async function connectDB() {
   const options = 'retryWrites=true&w=majority';
   try {
     const mongodbURL = `mongodb+srv://${username}:${password}@${host}/?${options}`;
-    console.log(mongodbURL);
     await mongoose.connect(mongodbURL, {});
     console.log('<< Connected to MongoDB >>');
   } catch (err) {

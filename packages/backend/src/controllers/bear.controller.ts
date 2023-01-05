@@ -1,18 +1,32 @@
-import { Response, NextFunction } from 'express';
+import { Request, Response, NextFunction } from 'express';
 
 import { IBear } from '@honey-heist/model';
 import { ModelRequest } from '../types';
-import { addBear } from '../services';
+import { addBear, getBear } from '../services';
 
 export async function createBear(
   req: ModelRequest<IBear>,
   res: Response,
   next: NextFunction,
 ) {
-  const bear = req.body;
   try {
-    await addBear(bear);
+    await addBear(req.body);
     res.sendStatus(201);
+    next();
+  } catch (error) {
+    res.sendStatus(500) && next(error);
+  }
+}
+
+export async function fetchBear(
+  req: Request,
+  res: Response,
+  next: NextFunction,
+) {
+  try {
+    const id = req.params.id;
+    const bear = await getBear(id);
+    res.status(200).send(bear);
     next();
   } catch (error) {
     res.sendStatus(500) && next(error);

@@ -5,3 +5,7 @@ export async function addBear(bear: IBear) {
   const model = new BearModel(bear);
   await model.save();
 }
+
+export async function getBear(id: string) {
+  return BearModel.findById(id);
+}
