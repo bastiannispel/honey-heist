@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
 import { Request, Response, NextFunction } from 'express';
 
 import { IBear } from '@honey-heist/model';
@@ -19,12 +20,12 @@ export async function createBear(
 }
 
 export async function fetchBear(
-  req: Request,
+  req: Request<{ id: string }>,
   res: Response,
   next: NextFunction,
 ) {
   try {
-    const id = req.params.id;
+    const { id } = req.params;
     const bear = await getBear(id);
     res.status(200).send(bear);
     next();
