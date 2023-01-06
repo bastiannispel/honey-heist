@@ -3,7 +3,12 @@ import { Request, Response, NextFunction } from 'express';
 
 import { IBear } from '@honey-heist/model';
 import { ModelRequest } from '../types';
-import { addBear, fetchBear, removeBear, updateBear } from '../services';
+import {
+  addBear,
+  deleteBearById,
+  findBearById,
+  updateBearById,
+} from '../services';
 
 export async function getBear(
   req: Request<{ id: string }>,
@@ -12,7 +17,7 @@ export async function getBear(
 ) {
   try {
     const { id } = req.params;
-    const bear = await fetchBear(id);
+    const bear = await findBearById(id);
     res.status(200).send(bear);
     next();
   } catch (error) {
@@ -34,7 +39,7 @@ export async function createBear(
   }
 }
 
-export async function putBear(
+export async function updateBear(
   req: Request<{ id: string }, object, IBear>,
   res: Response,
   next: NextFunction,
@@ -42,8 +47,7 @@ export async function putBear(
   try {
     const { id } = req.params;
     const bear = req.body;
-    console.log(bear);
-    await updateBear(id, bear);
+    await updateBearById(id, bear);
     res.sendStatus(201);
     next();
   } catch (error) {
@@ -58,7 +62,7 @@ export async function deleteBear(
 ) {
   try {
     const { id } = req.params;
-    await removeBear(id);
+    await deleteBearById(id);
     res.sendStatus(204);
     next();
   } catch (error) {

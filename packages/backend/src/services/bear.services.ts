@@ -5,7 +5,7 @@
 import { IBear } from '@honey-heist/model';
 import { BearModel } from '../database/models';
 
-export async function fetchBear(id: string) {
+export async function findBearById(id: string) {
   return BearModel.findById(id);
 }
 
@@ -14,11 +14,11 @@ export async function addBear(bear: IBear) {
   return model.save();
 }
 
-export async function updateBear(id: string, bear: IBear) {
+export async function updateBearById(id: string, bear: IBear) {
   const filter = { _id: id };
-  return BearModel.findOneAndUpdate(filter, bear);
+  return BearModel.findOneAndUpdate(filter, bear, { runValidators: true });
 }
 
-export async function removeBear(id: string) {
+export async function deleteBearById(id: string) {
   return BearModel.findByIdAndDelete(id);
 }
