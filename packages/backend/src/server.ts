@@ -7,11 +7,9 @@ import app from './app';
 
 dotenv.config();
 
-const hostPort = process.env.HOST_PORT || 3000;
-
 mongoose.set('strictQuery', false);
 void connectDB();
 
-app.listen(hostPort, () => {
+app.listen(process.env.PORT || 8000, () => {
   console.log('Server has started!');
 });

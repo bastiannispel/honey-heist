@@ -1,3 +1,4 @@
-export * from './bear.js';
-export * from './clothes.js';
-export * from './stats.js';
+export * from './bear';
+export * from './clothes';
+export * from './stats';
+export * from './user';

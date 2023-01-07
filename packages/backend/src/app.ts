@@ -3,11 +3,8 @@ import cors from 'cors';
 
 import router from './routes';
 
-const hostURL = process.env.HOST_URL || 'http://localhost';
-const hostPort = process.env.HOST_PORT || 3000;
-
 const corsOptions = {
-  origin: `${hostURL}:${hostPort}`,
+  origin: process.env.CORS_WHITELIST || 'http://localhost:3000',
 };
 
 const app = express();
