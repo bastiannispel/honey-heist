@@ -18,7 +18,7 @@ module.exports = {
     es6: true,
     node: true,
   },
-  ignorePatterns: ['dist', 'node_modules', 'coverage', '.yarn'],
+  ignorePatterns: ['node_modules', 'dist', 'coverage'],
   overrides: [
     {
       files: '**/*.{spec,test}.ts',
