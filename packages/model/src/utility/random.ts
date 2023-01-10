@@ -8,3 +8,7 @@ export function rollDice8() {
 function getRandomInt(max: number) {
   return Math.floor(Math.random() * max);
 }
+
+function test() {
+  return;
+}

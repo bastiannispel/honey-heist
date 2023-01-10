@@ -8,7 +8,7 @@
     "start": "node dist/server.js",
     "quickstart": "yarn clean && yarn build && yarn start",
     "test": "jest --coverage --passWithNoTests",
-    "eslint": "eslint . --ext .ts,.tsx",
+    "eslint": "eslint . --ext .ts,.tsx,.js",
     "typecheck": "tsc -p tsconfig.json --noEmit"
   },
   "devDependencies": {
