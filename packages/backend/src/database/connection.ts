@@ -1,9 +1,9 @@
 import mongoose, { Error } from 'mongoose';
 
 export async function connectDB() {
-  const username = encodeURIComponent(process.env.MONGODB_USER as string);
-  const password = encodeURIComponent(process.env.MONGODB_PASSWORD as string);
-  const host = process.env.MONGODB_HOST as string;
+  const username = encodeURIComponent(process.env.MONGODB_USER || 'ERROR');
+  const password = encodeURIComponent(process.env.MONGODB_PASSWORD || 'ERROR');
+  const host = process.env.MONGODB_HOST || 'ERROR';
   const options = 'retryWrites=true&w=majority';
   try {
     const mongodbURL = `mongodb+srv://${username}:${password}@${host}/?${options}`;

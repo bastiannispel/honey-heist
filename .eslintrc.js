@@ -14,11 +14,7 @@ module.exports = {
     'plugin:@typescript-eslint/recommended-requiring-type-checking',
     'plugin:prettier/recommended',
   ],
-  env: {
-    es6: true,
-    node: true,
-  },
-  ignorePatterns: ['node_modules', 'dist', 'coverage'],
+  ignorePatterns: ['dist', 'node_modules', 'coverage', '.yarn'],
   overrides: [
     {
       files: '**/*.{spec,test}.ts',
@@ -26,4 +22,8 @@ module.exports = {
       extends: ['plugin:jest/all'],
     },
   ],
+  env: {
+    es6: true,
+    node: true,
+  },
 };
