@@ -1,16 +1,17 @@
 import { RoleModel } from './models';
 
 export default async function initializeDB() {
-  await initializeRoles();
+  const roleNames = ['user', 'moderator', 'admin'];
+  await initializeRoles(roleNames);
 }
 
-async function initializeRoles(...names: string[]) {
+async function initializeRoles(roleNames: string[]) {
   await RoleModel.estimatedDocumentCount((err: Error, count: number) => {
     if (err || count > 0) {
       return;
     }
 
-    names.forEach(name => {
+    roleNames.forEach(name => {
       new RoleModel({
         name: name,
       })
