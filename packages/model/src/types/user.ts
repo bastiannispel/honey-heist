@@ -1,14 +1,16 @@
-import { Schema } from 'mongoose';
+import { ObjectId, Schema } from 'mongoose';
 
 export interface IRole {
+  _id: ObjectId;
   name: string;
 }
 
 export interface IUser {
+  _id: ObjectId;
   username: string;
   email: string;
   password: string;
-  roles: IRole[];
+  roles: ObjectId[];
 }
 
 export const roleSchema = new Schema<IRole>({
