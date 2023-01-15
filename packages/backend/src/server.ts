@@ -1,19 +1,15 @@
-import express from 'express';
+/* eslint-disable @typescript-eslint/no-unsafe-call */
 import mongoose from 'mongoose';
 import * as dotenv from 'dotenv';
 
-import router from './routes';
 import { connectDB } from './database';
+import app from './app';
 
 dotenv.config();
-
-const app = express();
-app.use(express.json());
-app.use('/api', router);
 
 mongoose.set('strictQuery', false);
 void connectDB();
 
-app.listen(3000, () => {
+app.listen(process.env.PORT || 8000, () => {
   console.log('Server has started!');
 });

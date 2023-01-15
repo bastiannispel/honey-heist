@@ -3,7 +3,6 @@ import { createBear, fetchBear } from '../controllers';
 const bearRouter = express.Router();
 
 bearRouter.post('/', () => createBear);
-
 bearRouter
   .route('/:id')
   .get((req, res, next) => {
